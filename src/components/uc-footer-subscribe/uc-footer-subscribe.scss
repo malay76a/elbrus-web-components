@@ -1,0 +1,58 @@
+form {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+
+  @include respondFrom($screen-sm-min) {
+    display: flex;
+    height: 50px;
+    border: 3px solid #66c05d;
+  }
+
+  @include mobile {
+    display: inline-flex;
+    height: em(50px);
+  }
+}
+
+input {
+  flex: 1 1 70%;
+  border: none;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+input:valid + label,
+input:focus + label {
+  display: none;
+}
+
+label {
+  position: absolute;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDE2IDEyIj4gICAgPHBhdGggZmlsbD0iI0IyQjJCMiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS4xODIgMGw2LjYwNiA2LjZMMTQuMzg5IDBIMS4xODJ6TTguNzMgNy41NWwtLjk0My45NDItLjk0MS0uOTQyTDAgLjcwNXYxMC41MTNsNC42OTMtNC42OTIuOTQyLjk0Mi00LjQ1OCA0LjQ1OGgxMy4yMjFMOS45NCA3LjQ2OGwuOTQyLS45NDIgNC42OTIgNC42OTZWLjcwNUw4LjczIDcuNTV6Ii8+PC9zdmc+);
+  width: 16px;
+  height: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  left: 15px;
+  transform: translate(0, -50%);
+}
+
+button {
+  background-color: #66c05d;
+  line-height: 1.18;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 11px;
+    width: 140px;
+  }
+  @include mobile {
+    font-size: em(11px);
+  }
+}

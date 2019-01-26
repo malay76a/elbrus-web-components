@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  @include respondFrom($screen-sm-min) {
+    padding-top: 5px;
+  }
+
+  @include mobile {
+    padding-top: em(5px);
+  }
+}

@@ -1,0 +1,19 @@
+:host {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+:host-context([typed="card"]) {
+  @include desktop-large {
+    padding: 30px;
+  }
+}
+
+::slotted(img) {
+  max-width: 100%;
+  max-height: 100%;
+}

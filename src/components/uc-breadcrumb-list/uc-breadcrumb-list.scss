@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include desktop-large {
+    margin-bottom: 26px;
+  }
+
+  @include desktop-small {
+    margin-bottom: 30px;
+  }
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include respondFrom($screen-sm-min) {
+    margin-top: 32px;
+  }
+
+  @include mobile {
+    margin-top: em(11px);
+    margin-bottom: em(21px);
+  }
+}
+
+::slotted(uc-breadcrumb-item) {
+  @include respondFrom($screen-sm-min) {
+    margin-right: 2px;
+  }
+
+  @include mobile {
+    margin-right: em(2px);
+    margin-bottom: em(4px);
+  }
+}

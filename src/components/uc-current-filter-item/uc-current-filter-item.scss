@@ -1,0 +1,111 @@
+:host {
+  display: block;
+  position: relative;
+  background-color: #e6e6e6;
+
+  @include respondFrom($screen-sm-min) {
+    margin-left: 10px;
+    padding: 3px 15px 3px 10px;
+    font-size: 11px;
+  }
+
+  @include mobile {
+    font-size: em(11px);
+    margin-left: em(10px, 11px);
+    padding: em(3px, 11px) em(15px, 11px) em(3px, 11px) em(10px, 11px);
+  }
+}
+div {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+
+  @include respondFrom($screen-sm-min) {
+    border-top: 10px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-right: 10px solid #e6e6e6;
+    left: -10px;
+  }
+
+  @include mobile {
+    border-top: em(10px, 11px) solid transparent;
+    border-bottom: em(11px, 11px) solid transparent;
+    border-right: em(10px, 11px) solid #e6e6e6;
+    left: em(-10px, 11px);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+
+    @include respondFrom($screen-sm-min) {
+      width: 4px;
+      height: 4px;
+      left: 10px;
+    }
+
+    @include mobile {
+      width: em(4px, 11px);
+      height: em(4px, 11px);
+      left: em(10px, 11px);
+    }
+  }
+}
+p {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+
+  @include respondFrom($screen-sm-min) {
+    width: 10px;
+    height: 10px;
+    right: 5px;
+  }
+
+  @include mobile {
+    width: em(10px, 11px);
+    height: em(10px, 11px);
+    right: em(5px, 11px);
+  }
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #333333;
+  }
+
+  &:before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 1px;
+    height: 100%;
+  }
+
+  &:after {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 1px;
+    height: 100%;
+  }
+}
+

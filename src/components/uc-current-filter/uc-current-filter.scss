@@ -1,0 +1,58 @@
+:host {
+  background-color: #ffffff;
+  border: 1px solid #f8e300;
+
+  @include respondFrom($screen-sm-min) {
+    padding: 11px;
+  }
+
+  @include mobile {
+    padding: em(11px);
+  }
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333333;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 13px;
+  }
+
+  @include mobile {
+    font-size: em(13px);
+  }
+}
+
+div {
+  color: #333333;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 11px;
+  }
+
+  @include mobile {
+    font-size: em(11px);
+  }
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #66c05d;
+  padding: 0;
+  margin-top: 10px;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 10px;
+  }
+
+  @include mobile {
+    font-size: em(10px, 11px);
+  }
+}

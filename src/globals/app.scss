@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+    font-family: $font-stack;
+
+    @include respondFrom($screen-sm-min) {
+        font-size: 14px;
+    }
+
+    @include mobile {
+        font-size: (14/320*100vw);
+    }
+}
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Bold.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Bold.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Bold.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Bold.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Bold.svg#leroy_merlin_sansbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-BoldItalic.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-BoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-BoldItalic.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-BoldItalic.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-BoldItalic.svg#leroy_merlin_sans_boldBdIt') format('svg');
+  font-weight: 700;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Italic.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Italic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Italic.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Italic.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Italic.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Italic.svg#leroy_merlin_sansitalic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Light.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Light.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Light.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Light.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Light.svg#leroy_merlin_sanslight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-LightItalic.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-LightItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-LightItalic.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-LightItalic.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-LightItalic.svg#leroy_merlin_sanslight_italic') format('svg');
+  font-weight: 200;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Regular.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Regular.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Regular.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Regular.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-Regular.svg#leroy_merlin_sansregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-SemiBoldItalic.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBoldItalic.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBoldItalic.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBoldItalic.svg#leroy_merlin_sanssemibold') format('svg');
+  font-weight: 600;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Leroy Merlin';
+  src: url('../assets/fonts/LeroyMerlinSans-Web-SemiBold.eot');
+  src: url('../assets/fonts/LeroyMerlinSans-Web-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBold.woff2') format('woff2'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBold.woff') format('woff'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBold.ttf') format('truetype'),
+  url('../assets/fonts/LeroyMerlinSans-Web-SemiBold.svg#leroy_merlin_sanssemibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+
+}

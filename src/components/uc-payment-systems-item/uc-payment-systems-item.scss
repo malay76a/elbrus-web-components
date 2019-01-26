@@ -1,0 +1,56 @@
+:host {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+
+  @include respondFrom($screen-md-min) {
+    font-size: 13px;
+  }
+
+  @include mobile {
+    font-size: em(13px);
+  }
+}
+
+:host([data-system="mir"]) {
+  background-image: url(//res.cloudinary.com/lmru/image/upload/index/mir-logo.svg);
+
+  @include respondFrom($screen-sm-min) {
+    width: 58px;
+    height: 16px;
+  }
+
+  @include mobile {
+    width: em(58px);
+    height: em(16px);
+  }
+}
+:host([data-system="visa"]) {
+  background-image: url(//res.cloudinary.com/lmru/image/upload/index/visa-logo.svg);
+
+  @include respondFrom($screen-sm-min) {
+    width: 57px;
+    height: 19px;
+  }
+
+  @include mobile {
+    width: em(57px);
+    height: em(19px);
+  }
+}
+:host([data-system="mastercard"]) {
+  background-image: url(//res.cloudinary.com/lmru/image/upload/index/mastercard-logo.svg);
+
+  @include respondFrom($screen-sm-min) {
+    width: 35px;
+    height: 27px;
+  }
+
+  @include mobile {
+    width: em(35px);
+    height: em(27px);
+  }
+}
+
+

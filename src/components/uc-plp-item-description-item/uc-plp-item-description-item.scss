@@ -1,0 +1,28 @@
+::slotted(.key) {
+  color: #727272;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 12px;
+  }
+
+  @include mobile {
+    font-size: em(11px);
+  }
+
+  &::after {
+    content: ':';
+  }
+}
+
+::slotted(.value) {
+  font-size: 12px;
+  color: #4a4a4a;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 12px;
+  }
+
+  @include mobile {
+    font-size: em(11px);
+  }
+}

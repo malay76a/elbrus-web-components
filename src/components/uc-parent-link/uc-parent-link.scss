@@ -1,0 +1,52 @@
+:host {
+  display: block;
+}
+
+::slotted(a) {
+  color: #57ad31;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex: 1 1 25%;
+  text-decoration: none;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 14px;
+  }
+
+  @include mobile {
+    font-size: em(12px);
+  }
+
+
+  &::before {
+    content: '';
+  }
+
+  @include mobile {
+    &::after {
+      content: '';
+      margin-left: em(21px, 12px);
+    }
+    &::before {
+      content: '';
+      margin-right: em(21px, 12px);
+    }
+  }
+
+  @include respondFrom($screen-sm-min) {
+    &::before {
+      content: '';
+      margin-right: 21px;
+    }
+  }
+
+  &::after,
+  &::before {
+    height: 1px;
+    max-width: 100%;
+    display: inline-block;
+    background-color: #d9d9d9;
+    flex: 1 1 25%;
+  }
+}

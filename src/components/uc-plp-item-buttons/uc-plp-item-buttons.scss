@@ -1,0 +1,19 @@
+:host {
+  display: grid;
+}
+
+:host-context([typed='list']) {
+  @include respondFrom($screen-sm-min) {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto;
+  }
+
+  @include mobile {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+:host-context([typed='card']) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}

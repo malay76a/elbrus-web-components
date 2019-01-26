@@ -1,0 +1,124 @@
+:host {
+  background-color: #ffffff;
+  display: grid;
+  border: 1px solid #efeeee;
+
+  @include mobile {
+    height: em(300px);
+    grid-template-columns: em(20px) 1fr em(20px) 1fr em(20px);
+    grid-template-rows: em(15px) em(67px) em(24px) em(50px) 1fr em(51px);
+    grid-row-gap: em(5px);
+    grid-template-areas:
+      ".       .           .           .           ."
+      ".       img         .           title       ."
+      ".       img         .           rating      ."
+      ".       img         .           prices      ."
+      ".       description description description ."
+      "buttons buttons     buttons     buttons     buttons";
+  }
+}
+
+:host([typed='list']) {
+  width: 100%;
+
+  @include respondFrom($screen-sm-min) {
+    grid-template-rows: 5px 38px 19px 1fr 52px 10px;
+    grid-row-gap: 5px;
+    grid-template-areas:
+      "img .           .           buttons"
+      "img title       title       buttons"
+      "img rating      .           buttons"
+      "img description description buttons"
+      "img prices      .           buttons"
+      "img .           .           buttons";
+  }
+
+  @include desktop-large {
+    height: 193px;
+    grid-template-columns: 194px 1fr 1fr 191px;
+    grid-column-gap: 20px;
+  }
+
+  @include desktop-small {
+    height: 193px;
+    grid-template-columns: 180px 1fr 1fr 130px;
+    grid-column-gap: 10px;
+  }
+
+  @include tablet {
+    height: 191px;
+    grid-template-columns: 152px 1fr 1fr 58px;
+    grid-column-gap: 10px;
+  }
+}
+
+:host([typed='card']) {
+  width: 100%;
+
+  @include desktop-large {
+    height: 520px;
+    grid-template-rows: 7px 236px 64px 20px 1fr 37px 62px;
+  }
+
+  @include desktop-small {
+    height: 532px;
+    grid-template-rows: 7px 236px 64px 20px 1fr 55px 62px;
+  }
+
+  @include tablet {
+    height: 532px;
+    grid-template-rows: 7px 236px 64px 20px 1fr 55px 62px;
+  }
+
+  @include respondFrom($screen-sm-min) {
+    grid-template-columns: 10px 1fr 10px;
+
+    grid-row-gap: 5px;
+    grid-template-areas:
+      ".       .           ."
+      ".       img         ."
+      ".       title       ."
+      ".       rating      ."
+      ".       description ."
+      ".       prices      ."
+      "buttons buttons     buttons";
+  }
+  @include  desktop-large {
+    ::slotted(uc-plp-item-prices) {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+  }
+}
+
+
+::slotted(.plp-item-img) {
+  grid-area: img;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::slotted(uc-plp-item-title) {
+  grid-area: title;
+  align-self: end;
+}
+
+::slotted(uc-plp-item-rating) {
+  grid-area: rating;
+  align-self: center;
+}
+
+::slotted(uc-plp-item-description) {
+  grid-area: description;
+}
+
+::slotted(uc-plp-item-prices) {
+  grid-area: prices;
+}
+
+::slotted(uc-plp-item-buttons) {
+  grid-area: buttons;
+}

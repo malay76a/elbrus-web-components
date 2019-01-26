@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop-large {
+      width: $screen-lg-min;
+    }
+
+    @include desktop-small {
+      width: 972px;
+    }
+
+    @include tablet {
+      width: 768px;
+    }
+
+    @include mobile {
+      padding-left: em(10px);
+      padding-right: em(10px);
+      width: 100%;
+    }
+}

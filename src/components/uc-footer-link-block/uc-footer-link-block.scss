@@ -1,0 +1,149 @@
+:host {
+  display: flex;
+
+  @include desktop-large {
+    flex-direction: column;
+  }
+
+  @include desktop-small {
+    height: 102px;
+    flex-flow: column wrap;
+    position: relative;
+  }
+  @include tablet {
+    height: 102px;
+    flex-flow: column wrap;
+    position: relative;
+  }
+
+  @include mobile {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+}
+
+::slotted(uc-footer-social-links) {
+  @include desktop-large {
+    margin-bottom: 15px;
+  }
+  @include desktop-small {
+    margin-right: 40px;
+    margin-bottom: 15px;
+    width: 390px;
+  }
+  @include tablet {
+    margin-right: 10px;
+    margin-bottom: 15px;
+    width: 300px;
+  }
+  @include mobile {
+    flex: 1 1 55%;
+    margin-right: em(10px);
+  }
+}
+::slotted(uc-footer-subscribe) {
+  @include desktop-large {
+    margin-bottom: 10px;
+  }
+  @include desktop-small {
+    margin-right: 40px;
+    width: 390px;
+  }
+  @include tablet {
+    margin-right: 10px;
+    width: 300px;
+  }
+  @include mobile {
+    flex: 1 1 30%;
+  }
+}
+::slotted(uc-footer-apps) {
+  @include desktop-large {
+    margin-bottom: 15px;
+  }
+
+  @include desktop-small {
+    margin-right: 40px;
+    height: 100%;
+    flex-direction: column;
+    width: 182px;
+    justify-content: space-between;
+  }
+
+  @include tablet {
+    margin-right: 10px;
+    height: 100%;
+    flex-direction: column;
+    width: 182px;
+    justify-content: space-between;
+  }
+
+  @include mobile {
+    margin-top: 10px;
+    flex: 1 1 100%;
+  }
+}
+::slotted(uc-payment-systems) {
+  @include desktop-large {
+    margin-bottom: 10px;
+  }
+  @include desktop-small {
+    order: 3;
+  }
+  @include tablet {
+    order: 3;
+  }
+  @include mobile {
+    order: 3;
+    margin-top: 10px;
+    flex: 1 1 100%;
+  }
+}
+::slotted(uc-adeo-link) {
+  @include desktop-large {
+    margin-bottom: 10px;
+  }
+  @include desktop-small {
+    order: 2;
+    margin-bottom: 10px;
+  }
+  @include tablet {
+    order: 2;
+    margin-bottom: 10px;
+  }
+  @include mobile {
+    order: 2;
+    margin-top: 10px;
+    flex: 1 1 100%;
+  }
+}
+::slotted(uc-parent-link) {
+  @include desktop-small {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 345px;
+  }
+  @include tablet {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 455px;
+  }
+  @include mobile {
+    order: 4;
+    margin-top: 10px;
+    flex: 1 1 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

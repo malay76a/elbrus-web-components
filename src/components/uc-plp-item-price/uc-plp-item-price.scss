@@ -1,0 +1,80 @@
+:host([type="main"]) {
+  color: #333333;
+
+  .first-part {
+    @include mobile {
+      font-size: em(21px);
+    }
+  }
+  .second-part {
+    @include mobile {
+      font-size: em(15px);
+    }
+  }
+
+  .unit {
+    @include mobile {
+      font-size: em(11px);
+    }
+  }
+}
+
+:host([type="second"]) {
+  color: #727272;
+
+  .first-part {
+    @include mobile {
+      font-size: em(12px);
+    }
+  }
+  .second-part {
+    @include mobile {
+      font-size: em(12px);
+    }
+  }
+
+  .unit {
+    @include mobile {
+      font-size: em(13px);
+    }
+  }
+}
+
+.first-part {
+  font-weight: bold;
+}
+
+.second-part {
+  font-weight: bold;
+}
+
+.unit {
+  margin-left: 5px;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 13px;
+  }
+}
+
+:host([type="main"]) {
+  @include respondFrom($screen-sm-min) {
+    .first-part {
+      font-size: 24px;
+    }
+
+    .second-part {
+      font-size: 18px;
+    }
+  }
+}
+:host([type="second"]) {
+  @include respondFrom($screen-sm-min) {
+    .first-part {
+      font-size: 14px;
+    }
+
+    .second-part {
+      font-size: 14px;
+    }
+  }
+}

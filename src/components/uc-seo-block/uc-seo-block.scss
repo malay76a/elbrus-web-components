@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  @include respondFrom($screen-sm-min) {
+    padding: 30px;
+    margin-top: 30px;
+  }
+
+  @include mobile {
+    padding: em(30px);
+    margin-top: em(30px);
+  }
+}
+
+::slotted(h2) {
+  margin-top: 0;
+  color: #666;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 16px;
+  }
+
+  @include mobile {
+    font-size: em(16px);
+  }
+}
+
+::slotted(p) {
+  color: #666;
+  margin: 0;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @include mobile {
+    font-size: em(12px);
+    line-height: em(20px, 12px);
+  }
+}

@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+
+  @include desktop-large {
+    padding: 0 10px;
+    margin-left: -10px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+::slotted(*) {
+  position: relative;
+}
+
+::slotted(*:nth-child(1)),
+::slotted(*:nth-child(3)){
+  @include respondFrom($screen-sm-min) {
+    flex: 1 1 25%;
+  }
+}
+::slotted(*:nth-child(1)) {
+  @include respondFrom($screen-sm-min) {
+    padding-right: 35px;
+  }
+}
+::slotted(*:nth-child(2)) {
+  @include respondFrom($screen-sm-min) {
+    flex: 1 1 50%;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+::slotted(*:nth-child(3)) {
+  @include respondFrom($screen-sm-min) {
+    padding-left: 35px;
+  }
+}
+
+::slotted(*:nth-child(2))::after,
+::slotted(*:nth-child(2))::before{
+  @include respondFrom($screen-sm-min) {
+    content: '';
+    height: 100%;
+    width: 0;
+    border-left: 1px dashed #d9d9d9;
+    position: absolute;
+    top: 0;
+  }
+}
+
+::slotted(*:nth-child(2))::after {
+  @include respondFrom($screen-sm-min) {
+    left: 0;
+  }
+}
+::slotted(*:nth-child(2))::before {
+  @include respondFrom($screen-sm-min) {
+    right: 0;
+  }
+}

@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  line-height: 1.5;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+:host([typed="list"]) {
+  @include respondFrom($screen-sm-min) {
+    flex-wrap: wrap;
+  }
+
+  ::slotted(uc-plp-item-description-item) {
+    @include respondFrom($screen-sm-min) {
+        flex: 1 1 50%;
+    }
+  }
+}
+
+:host([typed="card"]) {
+  @include respondFrom($screen-sm-min) {
+    flex-direction: column;
+  }
+}

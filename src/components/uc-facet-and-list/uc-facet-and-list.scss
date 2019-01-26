@@ -1,0 +1,47 @@
+:host {
+  @include respondFrom($screen-md-min) {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: auto;
+    grid-template-areas: "faset list";
+    grid-column-gap: 20px;
+  }
+}
+
+uc-fasets-list {
+  @include respondFrom($screen-md-min) {
+    grid-area: faset;
+  }
+}
+
+uc-item-list {
+  @include respondFrom($screen-md-min) {
+    grid-area: list;
+  }
+}
+
+.hamburger {
+  position: fixed;
+  height: em(155px);
+  width: em(40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10vh;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNzQgMTAyMyI+ICA8cGF0aCBkPSJNMCA1MTEuNUM0IDc4Ni4zOCAzMjMuMDcgNzcyLjI4IDM3NCAxMDIzVjBDMzIzLjA3IDI1MC43MiA0IDIzNi42MiAwIDUxMS41eiIgZmlsbD0iIzY2YzA1ZCIvPjwvc3ZnPg==);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filter-icon {
+  width: em(16px);
+  height: em(17px);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE2IDE3Ij4gICAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMCAwaDE2bC02IDd2MTBsLTQtMi45NDNWN3oiLz48L3N2Zz4=);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

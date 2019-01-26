@@ -1,0 +1,24 @@
+:host {
+  margin-top: 10px;
+  display: block;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333333;
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 13px;
+  }
+
+  @include mobile {
+    font-size: em(13px);
+  }
+}
+
+::slotted(uc-current-filter-item:not(:first-child)) {
+  margin-top: 5px;
+}

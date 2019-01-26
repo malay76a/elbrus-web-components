@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include respondFrom($screen-sm-min) {
+    max-height: 235px;
+    flex-direction: column;
+  }
+}
+
+::slotted(a) {
+  text-decoration: none;
+
+  @include desktop-large {
+    width: 161px;
+  }
+
+  @include tablet {
+    width: 143px;
+  }
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #66c05d;
+    line-height: 2.17;
+  }
+
+  @include mobile {
+    font-size: em(11px);
+    margin-right: em(5px, 11px);
+    line-height: 2;
+    color: #939393;
+  }
+}
+@include respondFrom($screen-sm-min) {
+  ::slotted(a:hover){
+    text-decoration: underline;
+  }
+}

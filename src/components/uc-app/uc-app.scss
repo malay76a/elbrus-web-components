@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+::slotted(uc-nckd) {
+  order: -4;
+
+  @include respond($screen-sm-max) {
+    display: none;
+  }
+}
+
+::slotted(uc-header-panel) {
+  order: -3;
+  @include respond($screen-sm-max) {
+    display: none;
+  }
+}
+
+::slotted(uc-header) {
+  order: -2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+::slotted(main) {
+  order: -1;
+}
+
+::slotted(footer) {
+  order: 1;
+
+  @include respondFrom($screen-sm-min) {
+    border-top: 5px solid #66c05d;
+    margin-top: 40px;
+  }
+  @include mobile {
+    border-top: em(5px) solid #66c05d;
+    margin-top: 20px;
+  }
+}

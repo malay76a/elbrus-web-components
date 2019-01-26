@@ -1,0 +1,40 @@
+@function em($size, $base:14px) {
+    $remSize: $size / $base;
+    @return $remSize * 1em;
+}
+
+@mixin respond($media) {
+    @media (max-width: $media) {
+        @content;
+    }
+}
+  
+@mixin respondFrom($media) {
+    @media (min-width: $media) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+
+@mixin desktop-small {
+    @media (max-width: $screen-md-max) and (min-width: $screen-md-min) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $screen-xs-max) {
+        @content;
+    }
+}

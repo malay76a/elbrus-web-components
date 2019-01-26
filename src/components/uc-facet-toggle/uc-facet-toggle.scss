@@ -1,0 +1,61 @@
+:host {
+  background-color: #ffffff;
+  position: relative;
+
+  @include respondFrom($screen-sm-min) {
+    padding: 11px;
+    min-height: 38px;
+  }
+
+  @include mobile {
+    padding: em(11px);
+    min-height: em(38px);
+  }
+}
+
+.toggler {
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+
+  @include respondFrom($screen-sm-min) {
+    top: 14px;
+    right: 11px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #333333;
+  }
+
+  @include mobile {
+    top: em(14px);
+    right: em(11px);
+    border-left: em(4px) solid transparent;
+    border-right: em(4px) solid transparent;
+    border-top: em(6px) solid #333333;
+  }
+}
+
+:host([closed]) {
+  .toggler {
+    transform: scale(1, -1);
+  }
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333333;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: calc(100% - 15px);
+
+  @include respondFrom($screen-sm-min) {
+    font-size: 13px;
+  }
+
+  @include mobile {
+    font-size: em(13px);
+  }
+}

@@ -1,0 +1,25 @@
+:host {
+  display: grid;
+  width: 100%;
+
+  @include mobile {
+    grid-row-gap: em(10px);
+    grid-template-columns: 1fr;
+  }
+}
+
+:host([typed='list']),
+:host(:not([typed='card'])){
+  @include respondFrom($screen-sm-min) {
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+  }
+}
+
+:host([typed='card']) {
+  @include respondFrom($screen-sm-min) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+  }
+}
